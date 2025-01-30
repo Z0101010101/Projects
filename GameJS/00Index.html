@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Spill</title>
+    <link rel="stylesheet" href="it2.css">
+  </head>
+  <body>
+    <!-- Linker alle lydfillene her -->
+    <audio id="lyd1">
+      <source src="gameOverlyd.wav" type="audio/mpeg">
+    </audio>
+
+    <audio id="lyd2">
+      <source src="ballSprett.mp3" type="audio/mpeg" >
+    </audio>
+
+    <audio id="lyd3">
+      <source src="Musikk.mp3" type="audio/mpeg" >
+    </audio>
+
+    <img id="reset" src="restart.png" style="visibility: hidden"
+     onclick="igjen()">
+
+<!-- Spillet startes av en knapp, på grunn av problemmer med lyd. -->
+     <div id="knappBoks">
+       <button id="knapp" onclick="gameLoop()">Start</button>
+     </div>
+
+    <canvas id="canvas" >
+      <img id="over" width="220" height="277" src="Game-Over.png"
+       style="visibility: hidden" >
+    </canvas>
+
+
+
+
+  </body>
+<!-- script som er øverst kan ikke være avhegige av de under siden de ikke har
+tilgang til funksjoner og variabler som finnes i dem -->
+  <script src="01bane.js" charset="utf-8"></script>
+  <script src="02firkant.js" charset="utf-8"></script>
+  <script src="03ball.js" charset="utf-8"></script>
+  <script src="04barriere.js" charset="utf-8"></script>
+  <script src="05poeng.js" charset="utf-8"></script>
+  <script src="06sluttSkjerm.js" charset="utf-8"></script>
+  <script src="07startSpill.js" charset="utf-8"></script>
+
+
+</html>
